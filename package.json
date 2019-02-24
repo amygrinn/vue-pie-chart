@@ -1,6 +1,6 @@
 {
   "name": "@tygr/vue-pie-chart",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pie chart",
   "main": "dist/vue-pie-chart.js",
   "files": [
@@ -53,5 +53,8 @@
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1",
     "webpack-node-externals": "^1.7.2"
+  },
+  "peerDependencies": {
+    "vue": "2"
   }
 }
