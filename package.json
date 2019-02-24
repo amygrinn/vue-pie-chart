@@ -1,0 +1,57 @@
+{
+  "name": "@tygr/vue-pie-chart",
+  "version": "1.0.0",
+  "description": "Pie chart",
+  "main": "dist/vue-pie-chart.js",
+  "files": [
+    "index.d.ts",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylergrinn/vue-pie-chart.git"
+  },
+  "scripts": {
+    "start": "run-p build:w serve",
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack",
+    "build:w": "cross-env NODE_ENV=development webpack -w",
+    "serve": "http-server",
+    "pub": "npm publish --access public"
+  },
+  "keywords": [
+    "pie",
+    "chart",
+    "vue",
+    "mobile",
+    "desktop"
+  ],
+  "author": "Tyler J Grinn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylergrinn/vue-pie-chart/issues"
+  },
+  "homepage": "https://github.com/tylergrinn/vue-pie-chart#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@types/node": "^11.9.5",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "vue": "^2.6.7",
+    "vue-loader": "^15.6.4",
+    "vue-template-compiler": "^2.6.7",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

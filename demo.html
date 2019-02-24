@@ -1,0 +1,55 @@
+<html>
+<head>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="dist/vue-pie-chart.min.js"></script>
+</head>
+<body>
+
+  <div id="app" v-cloak>
+    <pie-chart
+      :plot="plot"
+      title="Testing Pie Chart"
+      background-color="#00bfa5"
+      @click="datumSelected"></pie-chart>
+  </div>
+  
+  <script>
+    Vue.use(PieChart)
+    new Vue({
+      el: '#app',
+      data: () => ({
+        plot: [
+          {
+            value: 10,
+            color: 'blue',
+            label: 'Blue amount',
+            id: 1
+          },
+          {
+            value: 45,
+            color: 'green',
+            label: 'Green amount',
+            id: 2
+          },
+          {
+            value: 30,
+            color: 'purple',
+            label: 'Purple amount',
+            id: 3
+          }
+        ],
+      }),
+      methods: {
+        datumSelected(id) {
+          console.log(id + ' selected')
+        }
+      }
+    })
+  </script>
+</body>
+</html>
