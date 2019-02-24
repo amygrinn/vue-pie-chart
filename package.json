@@ -1,6 +1,6 @@
 {
   "name": "@tygr/vue-pie-chart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pie chart",
   "main": "dist/vue-pie-chart.js",
   "files": [
