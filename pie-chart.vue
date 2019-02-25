@@ -13,7 +13,7 @@
           stroke-linejoin="round"
           :fill="datum.color"
           :style="`--move-x: ${5 * unitCircleX(datum.mid)}px; --move-y: ${5 * unitCircleY(datum.mid)}px;`"
-          @click="datum.id && $emit('click', datum.id)"
+          @click="datum.id !== undefined && $emit('click', datum.id)"
           :d="`
             M ${getCart(datum.start)}
             A 50,50 0 ${datum.end - datum.start > 50 ? '1,1' : '0,1'} ${getCart(datum.end)}
