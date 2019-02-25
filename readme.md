@@ -25,11 +25,13 @@ export default {
 ### Browser
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/@tygr/vue-pie-chart/dist/vue-pie-chart.min.js"></script>
+<script src="https://unpkg.com/@tygr/vue-pie-chart/dist/vue-pie-chart.min.js" charset="utf-8"></script>
 <script>
   Vue.use(PieChart)
 </script>
 ```
+
+* Charset attribute required
 
 ## Usage
 
