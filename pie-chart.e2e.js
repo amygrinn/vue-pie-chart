@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 4000
+const PORT = 8000
 
 describe('Pie Chart', () => {
   it('Visits the site', () => {

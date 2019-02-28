@@ -20,10 +20,8 @@
     "build:w": "cross-env NODE_ENV=development webpack -w",
     "unit": "mocha -r @babel/register -r jsdom-global/register pie-chart.spec.js",
     "unit:w": "yarn unit -w",
-    "e2e": "concurrently -k -s first \"http-server -s -p 8000\" \"cross-env PORT=8000 cypress run\"",
-    "e2e:w": "concurrently \"http-server -s -p 8000\" \"cross-env PORT=8000 cypress open\"",
-    "serve": "http-server",
-    "cypress": "cypress"
+    "e2e": "concurrently -k -s first \"http-server -s -p 8000\" \"cypress run\"",
+    "e2e:w": "concurrently \"http-server -s -p 8000\" \"cypress open\""
   },
   "keywords": [
     "pie",
