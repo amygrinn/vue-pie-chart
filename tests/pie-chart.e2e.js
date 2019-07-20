@@ -2,7 +2,7 @@ const PORT = 8000
 
 describe('Pie Chart', () => {
   it('Visits the site', () => {
-    cy.visit('http://localhost:' + PORT + '/demo.html')
+    cy.visit('http://localhost:' + PORT)
   })
 
   it('Has 4 sectors', () => {

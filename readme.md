@@ -4,7 +4,7 @@
 
 A simple no-nonsense pie chart optimized for VueJS
 
-![demo](pie-chart.gif)
+![demo](docs/pie-chart.gif)
 
 ## Installation
 

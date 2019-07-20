@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { expect } from 'chai'
 
-import './dist/vue-pie-chart.min'
+import '../dist/vue-pie-chart.min'
 
 let PieChart
 

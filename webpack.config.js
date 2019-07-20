@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const nodeExternals = require('webpack-node-externals');
+const htmlWebpackPlugin = require('html-webpack-plugin')
 
 const common = {
   output: {
@@ -59,15 +60,21 @@ const common = {
 
 module.exports = [
   merge(common, {
-    entry: './plugin.ts',
+    entry: './src/plugin.ts',
     output: {
       filename: 'vue-pie-chart.min.js',
       libraryTarget: 'window',
       library: 'PieChart'
-    }
+    },
+    plugins: [
+      new htmlWebpackPlugin({
+        template: 'src/demo.html',
+        inject: 'head'
+      })
+    ]
   }),
   merge(common, {
-    entry: './pie-chart.vue',
+    entry: './src/pie-chart.vue',
     output: {
       filename: 'vue-pie-chart.js',
       libraryTarget: 'umd',
