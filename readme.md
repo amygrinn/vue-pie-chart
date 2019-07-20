@@ -1,6 +1,8 @@
 # Vue Pie Chart
 
-## [DEMO](https://vue-pie-chart.tygr.info)
+[![Build Status](https://travis-ci.org/tylergrinn/vue-pie-chart.svg?branch=master)](https://travis-ci.org/tylergrinn/vue-pie-chart)
+
+## [DEMO](https://vue-pie-chart.surge.sh)
 
 A simple no-nonsense pie chart optimized for VueJS
 
