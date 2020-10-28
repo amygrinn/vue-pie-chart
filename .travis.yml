@@ -1,35 +1,34 @@
 language: node_js
-node_js: 10
+node_js: 14
 
 addons:
   apt:
     packages:
-    - libgconf-2-4 # Required by cypress
+      - libgconf-2-4 # Required by cypress
 
 cache:
   yarn: true
   directories:
-  - "~/.cache" # Required by cypress
+    - '~/.cache' # Required by cypress
 
 script:
-- yarn build
-- yarn test
+  - yarn build
+  - yarn test
 
 deploy:
+  - provider: npm
+    email: tylergrinn@gmail.com
+    api_key:
+      secure: g3izP5FAysnY3XEdFu8YDSmcduYuSXDhnfFnP1OfwCU8XhLv9Aa7UFN+3FXz4yjUAq4hsK82UetlEe6QAbYpCPDFmpW9jpvuZs5qOo2e/DicciaJnSJnGV0FWLPDFliCOajRQ6PinNbj12y2v8HSNCVU8874bOtM/V7r6MrH+ueus0zmRh0JXAIl9y7gQVaj6wfR/+pgfBAywyr1o2fLqeawKKlOcKU8IFyyiuxZ4FpgOMOtGVhf8H9rWc+CTol2vp3aIBVvcz0lxs1V6Y5gAUoKjte7WFBWAwEPvYaeXDavynys3Q0P+gYrn13KOQw6LMW4OtuHg51+z8kU7KfR5yVL329F9+jVHFCy49nVqgzilK374c63+FoYOrKSG9VRKEqfTGKY6axcpGMsoe64uxcwuyetFCjpTlpgEXkZgugCleFflCIXhlix6i+Sl6hG/1j/dYat4GwgfQw4sI6xiXi1mRWrno35GMJk4Py8UTaCKHMHHDHsfVAJ/VxZbSvnQ3bBDYq4GdODG9iTSbnx4SrrfGEE7puwEdPorFpr4/brZw9mETkcTKklPUrflCVUSdxIGbso/ZQEhWi7rMROn0iz1d/AMCyHk1kijCivzXhszdT9FqzJcR+9YB1oQ4ZauGVaozdHsMvnyitdPUzA0zcrO6YYaMDEUHltLlLXl1U=
+    on:
+      tags: true
+      repo: tylergrinn/vue-pie-chart
+    skip_cleanup: true
 
-- provider: npm
-  email: tylergrinn@gmail.com
-  api_key:
-    secure: g3izP5FAysnY3XEdFu8YDSmcduYuSXDhnfFnP1OfwCU8XhLv9Aa7UFN+3FXz4yjUAq4hsK82UetlEe6QAbYpCPDFmpW9jpvuZs5qOo2e/DicciaJnSJnGV0FWLPDFliCOajRQ6PinNbj12y2v8HSNCVU8874bOtM/V7r6MrH+ueus0zmRh0JXAIl9y7gQVaj6wfR/+pgfBAywyr1o2fLqeawKKlOcKU8IFyyiuxZ4FpgOMOtGVhf8H9rWc+CTol2vp3aIBVvcz0lxs1V6Y5gAUoKjte7WFBWAwEPvYaeXDavynys3Q0P+gYrn13KOQw6LMW4OtuHg51+z8kU7KfR5yVL329F9+jVHFCy49nVqgzilK374c63+FoYOrKSG9VRKEqfTGKY6axcpGMsoe64uxcwuyetFCjpTlpgEXkZgugCleFflCIXhlix6i+Sl6hG/1j/dYat4GwgfQw4sI6xiXi1mRWrno35GMJk4Py8UTaCKHMHHDHsfVAJ/VxZbSvnQ3bBDYq4GdODG9iTSbnx4SrrfGEE7puwEdPorFpr4/brZw9mETkcTKklPUrflCVUSdxIGbso/ZQEhWi7rMROn0iz1d/AMCyHk1kijCivzXhszdT9FqzJcR+9YB1oQ4ZauGVaozdHsMvnyitdPUzA0zcrO6YYaMDEUHltLlLXl1U=
-  on:
-    tags: true
-    repo: tylergrinn/vue-pie-chart
-  skip_cleanup: true
-
-- provider: surge
-  project: dist
-  domain: vue-pie-chart.surge.sh
-  on:
-    tags: true
-    repo: tylergrinn/vue-piec-chart
-  skip_cleanup: true
+  - provider: surge
+    project: dist
+    domain: vue-pie-chart.surge.sh
+    on:
+      tags: true
+      repo: tylergrinn/vue-piec-chart
+    skip_cleanup: true
