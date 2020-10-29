@@ -1,8 +1,8 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const nodeExternals = require('webpack-node-externals');
-const htmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const common = {
   output: {
@@ -72,7 +72,7 @@ module.exports = [
       library: 'PieChart'
     },
     plugins: [
-      new htmlWebpackPlugin({
+      new HtmlWebpackPlugin({
         template: 'src/demo.html',
         inject: 'head'
       })
