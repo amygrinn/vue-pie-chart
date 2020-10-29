@@ -30,5 +30,5 @@ deploy:
     domain: vue-pie-chart.surge.sh
     on:
       tags: true
-      repo: tylergrinn/vue-piec-chart
+      repo: tylergrinn/vue-pie-chart
     skip_cleanup: true
